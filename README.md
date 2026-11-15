@@ -96,8 +96,12 @@ The system implements two services:
 | File | Purpose |
 |------|---------|
 | `vehicle_speed_interface.py` | Defines VehicleSpeedService identifiers, methods, events, event groups, and payload format |
-| `vehicle_speed_service.py` | Implements the Vehicle Speed Service provider |
-| `cluster_client.py` | Implements service discovery, method calls, and event subscriptions |
+| `vehicle_speed_service.py` | Implements the Vehicle ECU provider, generates speed updates, and handles vehicle speed-related methods and events |
+| `cluster_client.py` | Implements the Instrument Cluster consumer, service discovery, method calls, and event subscriptions |
+| `climate_interface.py` | Defines ClimateService methods, events, identifiers, and payload format |
+| `climate_service.py` | Implements the Climate ECU provider and cabin temperature functionality |
+| `central_display.py` | Implements the Central Display consumer for VehicleSpeedService and ClimateService |
+| `test_temperature_validation.py` | Tests SetTargetTemperature with valid and invalid temperature values |
 | `someipyd.json` | Contains SOME/IP daemon configuration |
 
 ## Climate Temperature Validation
